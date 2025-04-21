@@ -53,7 +53,7 @@ with st.sidebar:
                 st.session_state.bot = bot
                 st.session_state.data_generated = True
                 st.success("Sample data generated successfully!")
-                st.experimental_rerun()
+                st.rerun()
     else:
         st.success("✅ Bot is ready with sample data")
         
@@ -131,4 +131,4 @@ for i, chat in enumerate(reversed(st.session_state.chat_history)):
 # Clear chat history button
 if st.session_state.chat_history and st.button("Clear Chat History"):
     st.session_state.chat_history = []
-    st.experimental_rerun()
+    st.rerun()
